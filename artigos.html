@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media-query.css" />
+    <link rel="stylesheet" href="./css/hamburguer.css" />
+    <link rel="stylesheet" href="./css/dark_mode.css" />
+    <title>Brasilerin</title>
+  </head>
+  <body>
+    <header>
+      <div id="cabecalho">
+        <a href="http://www.brasilerin.com.br"
+          ><img
+            src="./imagens/arara_logo200x200-300.png"
+            alt="Logotipo Arara"
+            id="logo"
+        /></a>
+        <img
+          src="./imagens/lettering350x125.png"
+          alt="Brasilerin"
+          id="letter"
+        />
+
+        <div id="tela"></div>
+
+        <div id="img" onclick="tamanho_tela()">
+          <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone" />
+          <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet" />
+          <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop" />
+          <img src="./imagens/icons/tv.png" alt="TV" id="tv" />
+          <img src="./imagens/icons/print.png" alt="Impressora" id="print" />
+        </div>
+        <!-- id img -->
+
+        <div id="div_dark" onclick="toggleDarkMode()">
+          <img
+            src="./imagens/icons/dark_mb.png"
+            alt="Modo Escuro"
+            id="dark_m"
+          />
+        </div>
+        <!-- id div_dark-->
+
+        <div id="icone">
+          <img src="./imagens/icons/article.png" alt="Home" />
+        </div>
+        <!--id icone-->
+      </div>
+      <!-- id cabecalho -->
+
+      <nav id="menu-sup">
+        <div class="container">
+          <input type="checkbox" name="checkbox-menu" id="checkbox-menu" />
+
+          <label for="checkbox-menu" onclick="clickMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- id menu sup-->
+        <div id="hide_menu">
+          <a href="index.html"
+            ><button type="button" class="btn_menu">Home</button></a
+          >
+          | <button type="button" class="btn_menu">Loja</button> |
+          <a href="contato.html"
+            ><button type="button" class="btn_menu">Contato</button></a
+          >
+        </div>
+        <!-- id hide_menu-->
+      </nav>
+    </header>
+    <main>
+      <section id="artigos">
+        <div id="container1">
+          <p>
+            <a href="./artigos/exercicios_css/flexbox.html">Flexbox</a>
+          </p>
+        </div>
+      </section>
+      <!-- id corpo-->
+    </main>
+    <footer>
+      <h4>Todos os direitos reservados - <span>Brasilerin</span>© 2023</h4>
+    </footer>
+    <script></script>
+    <script src="darkmode.js"></script>
+    <script src="tamanho_tela.js"></script>
+  </body>
+</html>

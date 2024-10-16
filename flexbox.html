@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+      span {
+        border: 1px black solid;
+        padding: 3px;
+        box-sizing: 0px;
+      }
+
+      .flex-container {
+        /*Flex container é o elemento que envolve sua estrutura. Você define que um elemento é um Flex Container com a propriedade display e valores flex ou inline-flex. */
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: DodgerBlue;
+            justify-content: flex-start;
+        /* para flexbox não se determina width e height */
+      }
+
+      .container1 {
+        /* Flex Item são elementos-filhos do flex container. */
+        background-color: #f1f1f1;
+        margin: 5px;
+        padding: 8px;
+        font-size: 30px;
+        width: 30px;
+        height: 50px;
+        border: 3px black solid;
+    
+      }
+
+      /* Configuração para alinhar o peso de distribuição dos blocos*/ 
+
+      /* #c1 {
+        flex-grow: 1;
+      }
+      #c2 {
+        flex-grow: 5;
+      }
+      #c3 {
+        flex-grow: 3;
+      }
+      #c4 {
+        flex-grow: 4;
+      }
+      #c5 {
+        flex-grow: 2;
+      } */
+
+#barra_volume[input=range]{
+    width: 50%;
+}
+
+      </style>
+  <title>css3_flexbox</title>
+  </head>
+  <body>
+    <h1>Usando o flex-container</h1>
+
+    <p>
+      Determinado o <span>display: flex</span> para o container pai, experimente
+      as demais propriedades:
+    </p>
+
+ 
+      <select name="flex_direction" id="flex_direction" onclick="direcaoFlex()">
+        <option value="select" autofocus>Flex Direction:</option>
+        <option value="row">row (padrão)</option>
+        <option value="row-reverse">row-reverse</option>
+        <option value="column">column</option>
+        <option value="column-reverse">column-reverse</option>
+      </select>
+      <!-- FIM -->
+
+      <select name="flex_wrap" id="flex_wrap" onclick="quebra_linha()">
+        <option value="flex-wrap">Flex-Wrap</option>
+        <option value="nowrap">nowrap (padrão)</option>
+        <option value="wrap">wrap</option>
+        <option value="wrap-reverse">wrap-reverse</option>
+      </select>
+      
+      <select name="justify_content" id="justify_content" onclick="justify_content()">
+        <option>Justify-Content</option>
+        <option value="flex-start">flex-start (padrão)</option>
+        <option value="flex-end">flex-end</option>
+        <option value="end">end</option>
+        <option value="left">left</option>
+        <option value="right">right</option>
+        <option value="center">center</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+      </select>
+
+      <div>
+        <div>
+          palavras-chave: 
+        <p>
+          <div>desligado</div>
+          <div>safe</div>
+          <div>unsafe</div>
+        </p>
+        </div>
+        <input type="range" name="palavra_chave" id="palavra_chave" min="0" max="2" value="0"></div>
+<div>
+    selecione a div: <sub> min-1 max5</sub>
+          <label for="flex_grow">Flex-Grow</label>
+          <input type="range" class="barra_volume" name="flex_grow" id="flex_grow" min="1" max="5">
+</div>
+      
+      <input type="range" class="barra_volume" id="seleciona_caixa" min="0" max="5" step="1" value="1" onchange="selecionarCaixa()"> 
+
+    <div class="flex-container">
+      <!-- Propriedade flex-grow divide os elementos dentro do conteiner de maneira proporcional -->
+      <div class="container1" id="c1">1 a b c</div>
+      <div class="container1" id="c2">2 a b c</div>
+      <div class="container1" id="c3">3 a b c</div>
+      <div class="container1" id="c4">4 a b c</div>
+      <div class="container1" id="c5">5 a b c</div>
+    </div>
+
+    <p>
+      Um layout flexível deve ter um elemento pai com a propriedade
+      <em>display</em> definida como <em>flex</em>.
+    </p>
+
+    <p>
+      Os elementos filhos diretos do contêiner <em>flex</em> tornam-se
+      automaticamente itens <em>flex</em>.
+    </p>
+
+    <p>
+      No contêiner pai que invoca a flexbox não se determina <em>width</em> e <em>height</em>, a
+      propriedade é assume a responsividade da página
+    </p>
+
+    <!-- <script>
+      function direcaoFlex() {
+        let sentido_flex = document.querySelector("#sentido_flex");
+        let container1 = document.querySelector("div");
+
+        sentido_flex.addEventListener("change", () => {
+          let direcao = sentido_flex.value;
+          container1.style.flexDirection = direcao;
+        });
+      }
+    </script> -->
+    <script type="module" src="./js/flexbox.js"></script>
+  </body>
+</html>
